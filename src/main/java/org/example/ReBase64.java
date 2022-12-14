@@ -7,7 +7,7 @@ public class ReBase64 {
         return Base64.encodeBase64String(bytes);
     }
     public static String decode(String input) {
-        byte[] bytes = Base64.decodeBase64(input);
+        byte[] bytes = input.getBytes();
         return new String(Base64.decodeBase64(bytes));
     }
 }
