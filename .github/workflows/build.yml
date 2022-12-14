@@ -28,8 +28,3 @@ jobs:
         with:
           name: build.jar
           path: build/libs/*.jar
-      - name: release
-        uses: softprops/action-gh-release@v1
-        with:
-          name: build.jar
-          files: build/libs/*.jar
