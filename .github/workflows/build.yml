@@ -26,9 +26,10 @@ jobs:
       - name: Upload jar
         uses: actions/upload-artifact@v3
         with:
-          name: jar
+          name: build.jar
           path: build/libs/*.jar
       - name: release
         uses: softprops/action-gh-release@v1
         with:
+          name: build.jar
           files: build/libs/*.jar
