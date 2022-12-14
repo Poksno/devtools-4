@@ -8,7 +8,7 @@ on:
       - develop
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
@@ -24,7 +24,7 @@ jobs:
           ./gradlew test
           ./gradlew build
       - name: Upload jar
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: jar
           path: build/libs/*.jar
